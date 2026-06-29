@@ -1,0 +1,9 @@
+services:
+  nlp-api:
+    build: .
+    container_name: smart-nlp-toolkit
+    ports:
+      - "8000:8000"
+    environment:
+      - NLP_DEBUG=false
+    restart: unless-stopped
