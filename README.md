@@ -2,16 +2,9 @@
 
 A **production-grade** FastAPI microservice for natural language processing — sentiment analysis, language detection, entity extraction, text summarization, and readability scoring. **Zero external API keys required**. Fully offline with trained ML models.
 
-![CI](https://img.shields.io/github/actions/workflow/status/amori27/smart-nlp-toolkit/ci.yml?branch=main&style=flat-square&label=CI)
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat-square&logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square)
-![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker)
-![Tests](https://img.shields.io/badge/Tests-30%2B-brightgreen?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
-
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Method | Description |
 |---|---|---|
