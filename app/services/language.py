@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import re
-import unicodedata
-from collections import Counter
 
 # ---------------------------------------------------------------------------
 # Character-range heuristics for common scripts
@@ -147,7 +145,10 @@ def detect_language(text: str) -> dict:
     sorted_candidates = sorted(normalized.items(), key=lambda x: -x[1])
 
     top_lang, top_score = sorted_candidates[0]
-    candidates = [{"language": lang, "confidence": round(conf, 4)} for lang, conf in sorted_candidates[:5]]
+    candidates = [
+        {"language": lang, "confidence": round(conf, 4)}
+        for lang, conf in sorted_candidates[:5]
+    ]
 
     return {
         "language": top_lang,

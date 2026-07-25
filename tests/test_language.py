@@ -1,6 +1,5 @@
 """Tests for language detection."""
 
-import pytest
 from app.services.language import detect_language
 
 

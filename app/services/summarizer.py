@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import math
 import re
 from collections import Counter
 
@@ -74,8 +73,6 @@ def summarize_text(text: str, num_sentences: int = 3) -> dict:
             "num_sentences_original": len(sentences),
             "num_sentences_summary": 1,
         }
-
-    max_freq = max(freq.values())
 
     scored: list[tuple[int, float]] = []
     for idx, sentence in enumerate(sentences):

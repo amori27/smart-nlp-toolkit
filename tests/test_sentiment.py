@@ -1,6 +1,5 @@
 """Tests for sentiment classification."""
 
-import pytest
 from app.services.sentiment import classify_sentiment
 
 

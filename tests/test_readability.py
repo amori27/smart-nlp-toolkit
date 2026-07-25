@@ -1,7 +1,6 @@
 """Tests for readability analysis."""
 
-import pytest
-from app.services.readability import analyze_readability, _count_syllables
+from app.services.readability import _count_syllables, analyze_readability
 
 
 class TestReadability:
@@ -13,7 +12,10 @@ class TestReadability:
         assert result["total_sentences"] == 1
 
     def test_complex_text(self):
-        text = "The multidisciplinary investigation demonstrated significant correlation between variables"
+        text = (
+            "The multidisciplinary investigation demonstrated"
+            " significant correlation between variables"
+        )
         result = analyze_readability(text)
         assert result["flesch_kincaid_grade"] > 0
         assert result["level"] in (

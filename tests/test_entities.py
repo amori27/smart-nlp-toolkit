@@ -1,6 +1,5 @@
 """Tests for entity extraction."""
 
-import pytest
 from app.services.entities import extract_entities
 
 
@@ -38,7 +37,10 @@ class TestEntityExtraction:
         assert "amount" in types
 
     def test_multiple_types(self):
-        text = "Email john@test.com or call +1-555-1234, visit https://example.com, pay $50 on 2024-03-15 #launch"
+        text = (
+            "Email john@test.com or call +1-555-1234, visit"
+            " https://example.com, pay $50 on 2024-03-15 #launch"
+        )
         ents = extract_entities(text)
         types = {e.type.value for e in ents}
         assert types == {"email", "phone", "url", "amount", "date", "hashtag"}

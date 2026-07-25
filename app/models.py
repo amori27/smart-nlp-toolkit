@@ -2,23 +2,22 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from pydantic import BaseModel, Field, field_validator
-
 
 # ---------------------------------------------------------------------------
 # Enums
 # ---------------------------------------------------------------------------
 
-class Sentiment(str, Enum):
+class Sentiment(StrEnum):
     POSITIVE = "positive"
     NEGATIVE = "negative"
     NEUTRAL = "neutral"
 
 
-class EntityType(str, Enum):
+class EntityType(StrEnum):
     EMAIL = "email"
     PHONE = "phone"
     URL = "url"

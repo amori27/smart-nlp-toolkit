@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import re
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline

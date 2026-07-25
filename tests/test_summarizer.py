@@ -1,6 +1,5 @@
 """Tests for extractive summarization."""
 
-import pytest
 from app.services.summarizer import summarize_text
 
 
